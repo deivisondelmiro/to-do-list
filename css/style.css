@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --title-color: #000000da;
+  --bg-color: #215a753b;
+  --blue-color: #153B4D;
+  --white-color: #fff;
+  --item-bg-color: #215a759c;
+  --border-button-color: #ebe2e2;
+  --bg-valid-color: #215a75ab;
+  --font-item-color: #f1ecec;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-color);
+}
+
+.container {
+  width: 350px;
+  max-width: 350px;
+  margin-top: 20px;
+}
+
+#title {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: lowercase;
+  color: var(--title-color);
+  margin-bottom: 15px;
+}
+
+.containerInput {
+  height: 35px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+#itemInputList {
+  width: 280px;
+  height: 100%;
+  font-size: 1.05rem;
+  padding: 5px 5px 5px 10px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+}
+
+#itemInputList:focus {
+  outline: 2px solid var(--blue-color);
+}
+
+#buttonAddInputItem {
+  height: 100%;
+  width: 70px;
+  text-transform: uppercase;
+  color: var(--white-color);
+  background-color: var(--blue-color);
+  border-radius: 0 5px 5px 0;
+  border: none;
+  outline-color: #49d6d6;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
+.containerItem {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: var(--item-bg-color);
+  border-radius: 5px;
+}
+
+.containerItem span {
+  display: block;
+}
+
+.buttonValid, .buttonRemove {
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  color: var(--white-color);
+  background-color: var(--blue-color);
+  border-radius: 50%;
+  border: 2px solid var(--blue-color);
+  cursor: pointer;
+}
+
+.buttonValid {
+  border-color: var(--border-button-color);
+  background-color: var(--bg-valid-color);
+}
+
+.buttonRemove {
+  border-color: var(--border-button-color);
+  position: relative;
+  right: 0;
+}
+
+.newItemToDo {
+  color: var(--font-item-color);
+}
